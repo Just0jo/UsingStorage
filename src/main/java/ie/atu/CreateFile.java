@@ -6,6 +6,7 @@ import javax.imageio.IIOException;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class CreateFile {
     public static void main(String[] args) {
@@ -18,8 +19,9 @@ public class CreateFile {
 
 
                 FileWriter myWrite = new FileWriter(myFile,true);
-                myWrite.write("This is my first line");
-                myWrite.close();
+                PrintWriter myPrint = new PrintWriter(myWrite);
+                myPrint.println("This is my fourth line");
+                myPrint.close();
             }
             catch(IOException e)
             {
